@@ -1,0 +1,171 @@
+{
+  "model_id": 3934750841,
+  "report": {
+    "data_origin": "Entirely synthetic. Research guides mechanisms/features; no measured author dataset is used.",
+    "split": "Rig groups 0-139 train; 140-169 validation; 170-199 untouched test. No window from a test rig appears in train.",
+    "windows": 12000,
+    "sample_rate_hz": 99.84,
+    "samples_per_window": 256,
+    "road_labels": [
+      "Smooth asphalt",
+      "Rough asphalt",
+      "Concrete",
+      "Gravel"
+    ],
+    "condition_labels": [
+      "Normal",
+      "Imbalance-like periodic vibration",
+      "Other periodic abnormality",
+      "Impact"
+    ],
+    "models": {
+      "condition": {
+        "test_windows": 1800,
+        "binary_or_multiclass_accuracy": 1.0,
+        "accepted_accuracy": 1.0,
+        "coverage": 1.0,
+        "decision_success_uncertain_counts_wrong": 1.0,
+        "threshold": 0.65,
+        "confusion_matrix": [
+          [
+            450,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            450,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            450,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            450
+          ]
+        ],
+        "class_report": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 450.0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 450.0
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 450.0
+          },
+          "3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 450.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1800.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1800.0
+          }
+        },
+        "novelty_rejections": 0
+      },
+      "road": {
+        "test_windows": 1440,
+        "binary_or_multiclass_accuracy": 0.9743055555555555,
+        "accepted_accuracy": 0.9850533807829182,
+        "coverage": 0.9756944444444444,
+        "decision_success_uncertain_counts_wrong": 0.9611111111111111,
+        "threshold": 0.65,
+        "confusion_matrix": [
+          [
+            346,
+            0,
+            14,
+            0
+          ],
+          [
+            0,
+            360,
+            0,
+            0
+          ],
+          [
+            23,
+            0,
+            337,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            360
+          ]
+        ],
+        "class_report": {
+          "0": {
+            "precision": 0.9376693766937669,
+            "recall": 0.9611111111111111,
+            "f1-score": 0.9492455418381345,
+            "support": 360.0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 360.0
+          },
+          "2": {
+            "precision": 0.9601139601139601,
+            "recall": 0.9361111111111111,
+            "f1-score": 0.9479606188466948,
+            "support": 360.0
+          },
+          "3": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 360.0
+          },
+          "accuracy": 0.9743055555555555,
+          "macro avg": {
+            "precision": 0.9744458342019318,
+            "recall": 0.9743055555555555,
+            "f1-score": 0.9743015401712073,
+            "support": 1440.0
+          },
+          "weighted avg": {
+            "precision": 0.9744458342019318,
+            "recall": 0.9743055555555555,
+            "f1-score": 0.9743015401712073,
+            "support": 1440.0
+          }
+        }
+      }
+    }
+  }
+}

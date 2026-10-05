@@ -1,0 +1,220 @@
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 140, in worker
+    self.consume_scores(await asyncio.wait_for(client.read_gatt_char(SCORES),3))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 141, in worker
+    self.consume_environment(await asyncio.wait_for(client.read_gatt_char(ENV),3))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 124, in worker
+    await client.start_notify(SCORES,callback(self.consume_scores));await client.start_notify(ENV,callback(self.consume_environment));await client.start_notify(MOTION,callback(self.consume_motion))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 76, in start_notify
+    await self.transport.rpc('notify',uuid=uuid)
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+RuntimeError: [WinError -2147023673] The operation was canceled by the user
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 140, in worker
+    self.consume_scores(await asyncio.wait_for(client.read_gatt_char(SCORES),3))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 141, in worker
+    self.consume_environment(await asyncio.wait_for(client.read_gatt_char(ENV),3))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 141, in worker
+    self.consume_environment(await asyncio.wait_for(client.read_gatt_char(ENV),3))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 141, in worker
+    self.consume_environment(await asyncio.wait_for(client.read_gatt_char(ENV),3))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 72, in read_gatt_char
+    async def read_gatt_char(self,uuid):return bytes.fromhex(await self.transport.rpc('read',uuid=uuid))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\ble_transport.py", line 46, in rpc
+    return await asyncio.wait_for(future,25)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 140, in worker
+    self.consume_scores(await asyncio.wait_for(client.read_gatt_char(SCORES),3))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ritwi\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 104, in worker
+    raise RuntimeError('NO_BOARD: no TyreLabExpanded advertisement. Power/reset the Nano, enable Bluetooth, close nRF Connect/phone apps and bring it close. The app retries.')
+RuntimeError: NO_BOARD: no TyreLabExpanded advertisement. Power/reset the Nano, enable Bluetooth, close nRF Connect/phone apps and bring it close. The app retries.
+ERROR:root:BLE worker
+Traceback (most recent call last):
+  File "C:\Users\ritwi\Downloads\TyreLab_Expanded_Final\TyreLab_Expanded\02_Friend_Demo\app.py", line 104, in worker
+    raise RuntimeError('NO_BOARD: no TyreLabExpanded advertisement. Power/reset the Nano, enable Bluetooth, close nRF Connect/phone apps and bring it close. The app retries.')
+RuntimeError: NO_BOARD: no TyreLabExpanded advertisement. Power/reset the Nano, enable Bluetooth, close nRF Connect/phone apps and bring it close. The app retries.
